@@ -12,7 +12,7 @@ Requirements:
 * webpack 2.4.1
 * gulp 3.9.1
 * karma 1.6.0
-* karma 1.0.1
+* karma-cli 1.0.1
 
 First run `npm install`
 Get a free API key from  [Open Weather Map](https://openweathermap.org/api). 
