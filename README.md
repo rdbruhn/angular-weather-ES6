@@ -7,11 +7,19 @@ This is a weather app made with [NG6-Starter](https://github.com/rdbruhn/NG6-sta
 To Run
 -------------
 Requirements: 
+<<<<<<< HEAD
 * Node v.7.5.0
 * npm 4.1.2
 * webpack 2.4.1
 * gulp 3.9.1
 * karma 1.6.0
+=======
+Node v.7.5.0
+npm 4.1.2
+webpack 2.4.1
+gulp 3.9.1
+karma 1.6.0
+>>>>>>> 55a709e21f86ea8051ef5f9a031a1e8ef9cfd223
 
 First run `npm install`
 Get a free API key from  [Open Weather Map](https://openweathermap.org/api). 
