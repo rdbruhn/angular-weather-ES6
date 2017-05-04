@@ -13,3 +13,5 @@ Then replace 'YOUR_OWM_API_KEY' in
 `client/app/common/weather/weather.service.js`
 
 Last, run `gulp`
+
+Basic template tests can be run using `npm test`
