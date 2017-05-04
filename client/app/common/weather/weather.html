@@ -1,0 +1,41 @@
+<div class="container">
+  	
+	<span ng-if="$ctrl.weatherReport.length">
+  		<div class="row">
+  			<div class="col-md-4">
+  				<h1>Angular Weather</h1>
+  				<form ng-submit="$ctrl.getForecastWithZip()" >
+  					<input class="input-text" ng-model="$ctrl.zipCode" type="text">
+  				</form>
+  				<div class="card">
+  				  <div class="card-block">
+  				  	<img class="main-icon" src="{{ 'assets/'+ $ctrl.weatherReport[0].weather[0].main + '.png'}}" alt="{{day.weather[0].main}}">
+  				    <h1 class="card-title">{{$ctrl.weatherReport[0].main.temp}}°</h1>
+  				    <h5 class="card-title">{{$ctrl.weatherReport[0].main.temp_min}}°/{{$ctrl.weatherReport[0].main.temp_max}}°</h5>
+  				    <h4 class="card-title">{{ $ctrl.location }}</h4>
+  				    <h6 class="card-subtitle mb-2 text-muted"></h6>
+  				    <p class="card-text">Today's weather is {{$ctrl.weatherReport[0].weather[0].description}}</p>
+  				  </div>
+  				</div>
+  			</div>
+  			<div class="col-md-8">
+  				<h4 class="outlook">4-Day Outlook</h4>
+  				<div class="row" ng-repeat="day in $ctrl.weatherReport.slice(1)">
+  					<div class="col-md-6">
+  						
+  						<div class="row">
+  							<img class="col-md-4" src="{{ 'assets/'+ day.weather[0].main + '.png'}}" alt="{{day.weather[0].main}}">
+							<div class="col-md-8">
+								<div>{{day.main.temp_min}}°/{{day.main.temp_max}}°</div>
+	  							<div>Expect {{day.weather[0].description}} <time am-time-ago="day.dt|amFromUnix"></div>
+	  							<div>Humidity: {{day.main.humidity}}%</div>
+			  					<div>Wind Speed: {{day.wind.speed}}mph</div>  			
+		  					</div>
+		  				</div>
+		  			</div>
+  				</div>
+  			</div>
+  		</div>
+	</span>
+	
+</div>
