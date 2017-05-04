@@ -15,7 +15,6 @@ class WeatherService {
 	getGeoLocation() {
 		return this.$q(function(resolve, reject) {
 			window.navigator.geolocation.getCurrentPosition(function(position){
-  				console.log(position);
   				resolve(position);
 			}, function(error){
 				resolve(false);
@@ -59,7 +58,6 @@ class WeatherService {
 	getForecastWithZip(zipCode){
 		this.state.zipCode = zipCode;
 		return this.getAddress(zipCode).then((response)=>{
-			console.log(response, 'Address')
 			this.state.location = response.data.results[0].address_components[1].long_name + ', ' + response.data.results[0].address_components[3].short_name;
 			return this.getWeatherData(zipCode);
 
